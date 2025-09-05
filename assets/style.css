@@ -81,6 +81,18 @@ header .tagline {
   color: #a3b3d3;
 }
 
+/* Header brand (icon + title) */
+header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+}
+header .brand img.icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
 #game {
   display: flex;
   flex-direction: column;
