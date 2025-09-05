@@ -3,12 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Static Site</title>
+  <title>Mnemosyne Observatory — Escape Room</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <header>
+    <h1>Mnemosyne Observatory</h1>
+    <p class="tagline">A text-based escape room</p>
+  </header>
   <main>
-    <h1>Welcome to Your Static Site</h1>
+    <section id="game">
+      <div id="output" class="output" role="log" aria-live="polite"></div>
+      <div class="statusbar">
+        <div>Location: <span id="location"></span></div>
+        <div>Inventory: <span id="inv-list"></span></div>
+      </div>
+      <form id="command-form" autocomplete="off">
+        <input id="command-input" type="text" placeholder='Try: "inspect mural", "help", or "inventory"' aria-label="Command input" />
+        <button type="submit">Enter</button>
+      </form>
+    </section>
   </main>
   <footer>
     <p>&copy; 2025 Your Name</p>
