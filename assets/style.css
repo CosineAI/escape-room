@@ -155,3 +155,41 @@ header .tagline {
   }
   header h1 { font-size: 1.25rem; }
 }
+
+/* Display image layout */
+.display-wrapper {
+  display: flex;
+  flex-direction: column; /* vertical on mobile */
+  align-items: center;
+  gap: 1rem;
+}
+
+.art {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keep 1:1 */
+  max-width: 420px; /* reasonable size on mobile */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* fill square nicely */
+}
+
+@media (min-width: 768px) {
+  .display-wrapper {
+    flex-direction: row; /* horizontal on tablet/desktop */
+    align-items: stretch;
+  }
+  .art {
+    max-width: none;
+    flex: 0 0 40%;
+  }
+  #game {
+    flex: 1 1 auto;
+  }
+}
